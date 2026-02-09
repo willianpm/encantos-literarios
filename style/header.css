@@ -24,10 +24,10 @@ section.hero {
   border: 5px solid yellow;
 
   & h1 {
-    font-family: var(--title-lg);
+    font: var(--title-lg);
   }
 
   & p {
-    font-family: var(--body-lg);
+    font: var(--body-lg);
   }
 }

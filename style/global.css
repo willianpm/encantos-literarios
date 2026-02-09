@@ -27,10 +27,10 @@
   --text-body: #e2e7e9;
   --text-label: #bac6c9;
 
-  --title-lg: 700 48px/auto var(--font-family);
-  --title-md: 700 40px/auto var(--font-family);
-  --title-sm: 700 32px/auto var(--font-family);
-  --title-xs: 700 16px/auto var(--font-family);
+  --title-md: 700 40px/1.2 var(--font-family);
+  --title-lg: 700 48px/1.2 var(--font-family);
+  --title-sm: 700 32px/1.2 var(--font-family);
+  --title-xs: 700 16px/1.2 var(--font-family);
 
   --subtitle: 500 32px/200% var(--font-family);
 
@@ -43,7 +43,7 @@
   --body-xs: 400 12px/140% var(--font-family);
   --body-xs: 400 12px/140% var(--font-family);
 
-  --button: 700 14px/auto var(--font-family);
-  --link: 500 14px/auto var(--font-family);
-  --tag: 700 10px/auto var(--font-family);
+  --button: 700 14px/1.2 var(--font-family);
+  --link: 500 14px/1.2 var(--font-family);
+  --tag: 700 10px/1.2 var(--font-family);
 }
