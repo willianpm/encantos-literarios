@@ -1,0 +1,33 @@
+header.top {
+  border: 5px solid rgb(253, 192, 255);
+
+  max-width: 80em;
+  /* width: 100%; */
+  /* margin-inline: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-image: url("/encantos-literarios/assets/hero-background.png"); */
+  
+  
+  img {
+    /* width: 100%; */
+  }
+  
+  & img[src*="background"] {
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+section.hero {
+  border: 5px solid yellow;
+
+  & h1 {
+    font-family: var(--title-lg);
+  }
+
+  & p {
+    font-family: var(--body-lg);
+  }
+}
