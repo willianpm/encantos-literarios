@@ -29,6 +29,33 @@ section.hero {
       transition: 500ms;
     }
 
+    & > img,
+    & .feature-icons img,
+    & .highlight {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 600ms ease-in-out;
+    }
+
+    &:hover {
+      & > img {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      & .highlight {
+        opacity: 1;
+        visibility: visible;
+        color: var(--blue-light);
+      }
+
+      & .feature-icons img {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
     & > img {
       width: 5.5rem;
       height: 5.5rem;
@@ -39,6 +66,8 @@ section.hero {
       height: 4.5rem;
 
       transform: rotate(90deg);
+
+      animation: reveal 0.8s ease forwards 1.5s;
     }
 
     & .feature-icons img:last-child {
@@ -46,11 +75,13 @@ section.hero {
       height: 2.5rem;
 
       transform: rotate(-14.48deg);
+
+      animation: reveal 0.8s ease forwards 1s;
     }
 
     & > img:hover {
-      transform: rotate(20.76deg);
       scale: 1.1;
+      transform: rotate(20.76deg);
     }
 
     & .feature-icons img:first-child:hover {
@@ -65,7 +96,29 @@ section.hero {
   }
 
   & p {
-    font: var(--body-lg);
+    font: var(--subtitle);
     color: var(--text-body);
+
+    animation: reveal 1s ease forwards;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorHighlight {
+  from {
+    color: var(--text-body);
+  }
+  to {
+    color: var(--blue-light);
   }
 }

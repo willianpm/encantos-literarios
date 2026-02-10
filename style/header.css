@@ -1,4 +1,6 @@
 header.main-header {
+  animation: fadeInHeader 2s ease-out forwards;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,17 +23,17 @@ header.main-header {
     width: 100%;
     max-width: 80em;
 
-    margin-top: 32px;
+    margin-top: 2rem;
     padding-inline: 1rem;
 
     & button {
-      width: 89px;
-      height: 40px;
+      min-width: 5.56rem;
+      height: 2.5rem;
 
       cursor: pointer;
 
       border: none;
-      border-radius: 8px;
+      border-radius: 0.5rem;
 
       font: var(--button);
       color: var(--text-title);
@@ -59,5 +61,17 @@ header.main-header {
       font: var(--body-lg);
       color: var(--text-body);
     }
+  }
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
