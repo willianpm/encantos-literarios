@@ -1,4 +1,4 @@
-header.top {
+header.main-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@ header.top {
   min-height: 59rem;
   max-width: 100%;
 
-  & .top-1 {
+  & .nav-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,10 +39,11 @@ header.top {
     }
   }
 
-  & .hero-intro {
+  & .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 17.37rem;
 
     gap: 2rem;
     text-align: center;
@@ -58,45 +59,5 @@ header.top {
       font: var(--body-lg);
       color: var(--text-body);
     }
-  }
-}
-
-section.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  padding-top: 278px;
-
-  & .hero-features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 7.5rem;
-
-    & .feature-icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 75rem;
-    }
-    & img:nth-of-type(1) {
-      width: 5.5rem;
-    }
-
-    & img:nth-of-type(2) {
-      width: 5rem;
-    }
-
-    & img:nth-of-type(3) {
-      width: 4.5rem;
-    }
-  }
-
-  & p {
-    font: var(--body-lg);
-    color: var(--text-body);
   }
 }
