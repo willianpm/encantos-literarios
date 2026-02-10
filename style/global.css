@@ -37,12 +37,8 @@
   --subtitle: 500 32px/200% var(--font-family);
 
   --body-lg: 400 20px/140% var(--font-family);
-  --body-lg: 400 20px/140% var(--font-family);
-  --body-md: 400 16px/140% var(--font-family);
   --body-md: 400 16px/140% var(--font-family);
   --body-sm: 400 14px/140% var(--font-family);
-  --body-sm: 400 14px/140% var(--font-family);
-  --body-xs: 400 12px/140% var(--font-family);
   --body-xs: 400 12px/140% var(--font-family);
 
   --button: 700 14px/1.2 var(--font-family);
