@@ -47,5 +47,5 @@
 }
 
 html {
-  background-color: black;
+  background-color: var(--shape-background);
 }
