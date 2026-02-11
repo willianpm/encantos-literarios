@@ -29,36 +29,78 @@ section.hero {
       transition: 500ms;
     }
 
-    & > img,
-    & .feature-icons img,
-    & .highlight {
+    & .animated-text span {
+      font: var(--subtitle);
+      color: var(--text-body);
+      opacity: 0.6;
+      transition: all 600ms ease-in-out;
+    }
+
+    & .img-step-1,
+    & .img-step-2,
+    & .img-step-4 {
       opacity: 0;
       visibility: hidden;
+      transform: translateY(10px);
       transition: all 600ms ease-in-out;
     }
 
     &:hover {
-      & > img {
+      & .img-step-1 {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+        transition-delay: 0s;
       }
 
-      & .highlight {
+      & .step-2 {
+        opacity: 1;
+        color: var(--text-body);
+        transition-delay: 1s;
+
+        & .highlight {
+          color: var(--blue-light);
+        }
+      }
+      & .img-step-2 {
         opacity: 1;
         visibility: visible;
-        color: var(--blue-light);
+        transform: translateY(0);
+        transition-delay: 1s;
       }
 
-      & .feature-icons img {
+      & .step-3 {
+        opacity: 1;
+        color: var(--text-body);
+        transition-delay: 1s;
+
+        & .highlight {
+          color: var(--blue-light);
+        }
+      }
+
+      & .step-4 {
+        opacity: 1;
+        color: var(--text-body);
+        transition-delay: 3s;
+
+        & .highlight {
+          color: var(--blue-light);
+        }
+      }
+      & .img-step-4 {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0);
+        transition-delay: 3s;
       }
     }
 
     & > img {
       width: 5.5rem;
       height: 5.5rem;
+
+      transform: rotate(25deg);
     }
 
     & .feature-icons img:first-child {
@@ -66,8 +108,6 @@ section.hero {
       height: 4.5rem;
 
       transform: rotate(90deg);
-
-      animation: reveal 0.8s ease forwards 1.5s;
     }
 
     & .feature-icons img:last-child {
@@ -75,8 +115,6 @@ section.hero {
       height: 2.5rem;
 
       transform: rotate(-14.48deg);
-
-      animation: reveal 0.8s ease forwards 1s;
     }
 
     & > img:hover {
@@ -98,8 +136,6 @@ section.hero {
   & p {
     font: var(--subtitle);
     color: var(--text-body);
-
-    animation: reveal 1s ease forwards;
   }
 }
 
