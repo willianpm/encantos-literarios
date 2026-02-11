@@ -12,7 +12,7 @@ header.main-header {
   background-position: center;
   background-repeat: no-repeat;
 
-  min-height: 59rem;
+  min-height: 100vh;
   max-width: 100%;
 
   & .nav-wrapper {
