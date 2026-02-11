@@ -6,16 +6,19 @@ section.hero {
 
   text-align: center;
 
+  max-width: 90em;
+  margin: 6rem auto 5rem;
+  padding: 0px 7.5rem 5rem;
+
   & .hero-features {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-items: center;
-    padding: 16px;
-    gap: 48px;
 
-    max-width: 80em;
-    padding: 7.5rem;
+    & p {
+      font: var(--subtitle);
+      color: var(--text-body);
+    }
 
     & .feature-icons {
       display: flex;
@@ -25,27 +28,37 @@ section.hero {
       width: 100%;
     }
 
-    & img {
-      transition: 500ms;
-    }
-
     & .animated-text span {
       font: var(--subtitle);
       color: var(--text-body);
-      opacity: 0.6;
-      transition: all 600ms ease-in-out;
+      opacity: 50%;
+      transition: all;
+      transition-delay: 2s;
     }
 
     & .img-step-1,
     & .img-step-2,
-    & .img-step-4 {
+    & .img-step-3 {
       opacity: 0;
       visibility: hidden;
-      transform: translateY(10px);
-      transition: all 600ms ease-in-out;
+      transform: translateY(20px);
+      transition: all 600ms ease;
+      transition-delay: 1s;
     }
 
     &:hover {
+      & .step-1 {
+        opacity: 1;
+        color: var(--text-body);
+        transition-delay: 0s;
+
+        & .highlight-1 {
+          opacity: 1;
+          color: var(--blue-light);
+          transition-delay: inherit;
+        }
+      }
+
       & .img-step-1 {
         opacity: 1;
         visibility: visible;
@@ -56,105 +69,80 @@ section.hero {
       & .step-2 {
         opacity: 1;
         color: var(--text-body);
-        transition-delay: 1s;
+        transition-delay: 600ms;
 
-        & .highlight {
+        & .highlight-2 {
+          opacity: 1;
           color: var(--blue-light);
+          transition-delay: inherit;
         }
       }
+
       & .img-step-2 {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        transition-delay: 1s;
+        transition-delay: 600ms;
       }
 
       & .step-3 {
         opacity: 1;
         color: var(--text-body);
-        transition-delay: 1s;
+        transition-delay: 1.2s;
 
-        & .highlight {
+        & .highlight-3 {
+          opacity: 1;
           color: var(--blue-light);
+          transition-delay: inherit;
         }
       }
 
-      & .step-4 {
-        opacity: 1;
-        color: var(--text-body);
-        transition-delay: 3s;
-
-        & .highlight {
-          color: var(--blue-light);
-        }
-      }
-      & .img-step-4 {
+      & .img-step-3 {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        transition-delay: 3s;
+        transition-delay: 1.2s;
       }
     }
 
-    & > img {
+    & .img-1 {
       width: 5.5rem;
       height: 5.5rem;
 
-      transform: rotate(25deg);
+      rotate: 25deg;
     }
 
-    & .feature-icons img:first-child {
+    & .img-1:hover {
+      rotate: 20.76deg;
+      scale: 1.1;
+    }
+
+    & .img-2 {
       width: 4.5rem;
       height: 4.5rem;
 
-      transform: rotate(90deg);
+      rotate: 90deg;
     }
 
-    & .feature-icons img:last-child {
+    & .img-2:hover {
+      rotate: 99.47deg;
+      scale: 1.1;
+
+      transition-delay: 0s;
+    }
+
+    & .img-3 {
       width: 2.5rem;
       height: 2.5rem;
 
-      transform: rotate(-14.48deg);
+      rotate: -14.48deg;
     }
 
-    & > img:hover {
+    & .img-3:hover {
+      rotate: -6.48deg;
       scale: 1.1;
-      transform: rotate(20.76deg);
+
+      transition-delay: 0s;
     }
-
-    & .feature-icons img:first-child:hover {
-      transform: rotate(99.47deg);
-      scale: 1.1;
-    }
-
-    & .feature-icons img:last-child:hover {
-      transform: rotate(-6.48deg);
-      scale: 1.1;
-    }
-  }
-
-  & p {
-    font: var(--subtitle);
-    color: var(--text-body);
-  }
-}
-
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes colorHighlight {
-  from {
-    color: var(--text-body);
-  }
-  to {
-    color: var(--blue-light);
   }
 }
