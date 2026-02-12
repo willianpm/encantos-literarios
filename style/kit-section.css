@@ -1,0 +1,44 @@
+section.mystery-box {
+  border: 3px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  & .mystery-box-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+    gap: 16px;
+    padding-top: 15rem;
+
+    h2 {
+      font: var(--title-sm);
+      color: var(--text-title);
+    }
+
+    & legend {
+      display: block;
+      font: var(--body-md);
+      color: var(--text-body);
+    }
+
+    & span {
+      width: 2rem;
+      height: 2rem;
+
+      background-color: var(--pink-base);
+
+      mask-image: url(../assets/icons/star.svg);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+
+      -webkit-mask-image: url(../assets/icons/star.svg);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+    }
+  }
+}
