@@ -1,6 +1,4 @@
 section.mystery-box {
-  border: 3px solid red;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +37,90 @@ section.mystery-box {
       -webkit-mask-image: url(../assets/icons/star.svg);
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-size: contain;
+    }
+  }
+
+  & .mystery-box-content {
+    border: 3px solid red;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    grid-template-areas: "stack";
+
+    min-height: 600px;
+    margin-top: 4rem;
+
+    & > * {
+      grid-area: stack;
+    }
+
+    & .img-book {
+      width: 280px;
+      z-index: 10;
+    }
+
+    & .img-pin {
+      width: 100px;
+      z-index: 20;
+      transform: translate(-140px, 160px);
+    }
+
+    & .img-marker-y {
+      width: 100px;
+      z-index: 5;
+      transform: translate(100px, -40px) rotate(10deg);
+    }
+
+    & .img-marker-p {
+      width: 110px;
+      z-index: 6;
+      transform: translate(160px, -20px) rotate(20deg);
+    }
+
+    & p {
+      font: var(--body-md);
+      color: var(--text-title);
+      white-space: nowrap;
+    }
+
+    & .label-book {
+      transform: translate(-250px, -180px);
+    }
+    & .label-pin {
+      transform: translate(-250px, 40px);
+    }
+    & .label-marker {
+      transform: translate(180px, 250px);
+    }
+
+    & img[class*="arrow"] {
+      background-color: var(--pink-base);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+
+    & .arrow-1 {
+      width: 60px;
+      transform: translate(-140px, -150px);
+      -webkit-mask-image: url("assets/icons/arrow-1.svg");
+      mask-image: url("assets/icons/arrow-1.svg");
+    }
+
+    & .arrow-2 {
+      width: 40px;
+      transform: translate(-180px, 90px);
+      -webkit-mask-image: url("assets/icons/arrow-2.svg");
+      mask-image: url("assets/icons/arrow-2.svg");
+    }
+
+    & .arrow-3 {
+      width: 80px;
+      transform: translate(120px, 180px);
+      -webkit-mask-image: url("assets/icons/arrow-3.svg");
+      mask-image: url("assets/icons/arrow-3.svg");
     }
   }
 }
