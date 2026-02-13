@@ -101,36 +101,44 @@ section.mystery-box {
         transform: translate(23rem, -3rem) rotate(22deg);
         z-index: 5;
       }
-    }
 
-    & p {
-      font: var(--body-md);
-      color: var(--text-title);
-      white-space: nowrap;
-    }
+      & p {
+        font: var(--body-md);
+        color: var(--text-title);
+        white-space: nowrap;
+      }
 
-    & .label-book {
-      transform: translate(-350px, -380px);
-    }
+      & .label-book {
+        transform: translate(-350px, -380px);
+      }
 
-    & .label-pin {
-      transform: translate(-350px, 10px);
-    }
+      & .label-pin {
+        transform: translate(-350px, 10px);
+      }
 
-    & .label-marker {
-      transform: translate(380px, 350px);
-    }
+      & .label-marker {
+        transform: translate(380px, 350px);
+      }
 
-    & .arrow-1 {
-      transform: translate(-140px, -150px);
-    }
+      & .arrow-1,
+      & .arrow-2,
+      & .arrow-3 {
+        width: 5rem;
+        height: auto;
+        z-index: 15;
+      }
 
-    & .arrow-2 {
-      transform: translate(-180px, 90px);
-    }
+      & .arrow-1 {
+        transform: translate(-18.75rem, -21.87rem);
+      }
 
-    & .arrow-3 {
-      transform: translate(120px, 180px);
+      & .arrow-2 {
+        transform: translate(-21.25rem, 4.7rem);
+      }
+
+      & .arrow-3 {
+        transform: translate(25rem, 18.12rem);
+      }
     }
   }
 }
