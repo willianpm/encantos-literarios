@@ -41,41 +41,66 @@ section.mystery-box {
   }
 
   & .mystery-box-content {
-    border: 3px solid red;
     display: grid;
+    grid-template-areas: "stack";
     justify-items: center;
     align-items: center;
 
-    grid-template-areas: "stack";
 
-    min-height: 600px;
+    min-height: 57.5rem;
     margin-top: 4rem;
 
-    & > * {
+    &>* {
       grid-area: stack;
+      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    & p,
+    & img:not(.img-book) {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 0);
     }
 
     & .img-book {
-      width: 280px;
+      width: 29rem;
+      height: 38.56rem;
       z-index: 10;
     }
 
     & .img-pin {
-      width: 100px;
-      z-index: 20;
-      transform: translate(-140px, 160px);
+      height: 16rem;
+      width: 13.87rem;
     }
 
-    & .img-marker-y {
-      width: 100px;
-      z-index: 5;
-      transform: translate(100px, -40px) rotate(10deg);
-    }
-
+    & .img-marker-y,
     & .img-marker-p {
-      width: 110px;
-      z-index: 6;
-      transform: translate(160px, -20px) rotate(20deg);
+      height: 33.5rem;
+      width: 10.75rem;
+    }
+
+    &:hover {
+
+      & p,
+      & img {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      & .img-pin {
+        transform: translate(-16.5rem, 17rem) rotate(-8deg);
+        z-index: 11;
+      }
+
+      & .img-marker-y {
+        transform: translate(17rem, -8.75rem) rotate(12deg);
+        z-index: 6;
+      }
+
+      & .img-marker-p {
+        transform: translate(23rem, -3rem) rotate(22deg);
+        z-index: 5;
+      }
     }
 
     & p {
@@ -85,42 +110,27 @@ section.mystery-box {
     }
 
     & .label-book {
-      transform: translate(-250px, -180px);
-    }
-    & .label-pin {
-      transform: translate(-250px, 40px);
-    }
-    & .label-marker {
-      transform: translate(180px, 250px);
+      transform: translate(-350px, -380px);
     }
 
-    & img[class*="arrow"] {
-      background-color: var(--pink-base);
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: contain;
-      mask-size: contain;
+    & .label-pin {
+      transform: translate(-350px, 10px);
+    }
+
+    & .label-marker {
+      transform: translate(380px, 350px);
     }
 
     & .arrow-1 {
-      width: 60px;
       transform: translate(-140px, -150px);
-      -webkit-mask-image: url("assets/icons/arrow-1.svg");
-      mask-image: url("assets/icons/arrow-1.svg");
     }
 
     & .arrow-2 {
-      width: 40px;
       transform: translate(-180px, 90px);
-      -webkit-mask-image: url("assets/icons/arrow-2.svg");
-      mask-image: url("assets/icons/arrow-2.svg");
     }
 
     & .arrow-3 {
-      width: 80px;
       transform: translate(120px, 180px);
-      -webkit-mask-image: url("assets/icons/arrow-3.svg");
-      mask-image: url("assets/icons/arrow-3.svg");
     }
   }
 }
