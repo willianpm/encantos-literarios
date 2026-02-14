@@ -2,7 +2,7 @@ section.mystery-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 
   & .mystery-box-title {
     display: flex;
@@ -18,7 +18,7 @@ section.mystery-box {
       color: var(--text-title);
     }
 
-    & legend {
+    & small {
       display: block;
       font: var(--body-md);
       color: var(--text-body);
@@ -46,40 +46,61 @@ section.mystery-box {
     justify-items: center;
     align-items: center;
 
-
     min-height: 57.5rem;
     margin-top: 4rem;
 
     &>* {
       grid-area: stack;
-      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out, visibility 0.8s;
+      transition-delay: 0.2s;
+
+      will-change: transform, opacity;
     }
 
     & p,
     & img:not(.img-book) {
       opacity: 0;
       visibility: hidden;
-      transform: translate(0, 0);
+      transform: translate(0, 0) scale(0.8);
+
+      font: var(--body-md);
+      color: var(--text-title);
+      white-space: nowrap;
     }
 
     & .img-book {
       width: 29rem;
       height: 38.56rem;
+
       z-index: 10;
     }
 
     & .img-pin {
       height: 16rem;
       width: 13.87rem;
+
+      z-index: 9;
     }
 
-    & .img-marker-y,
+    & .img-marker-y {
+      height: 33.5rem;
+      width: 10.75rem;
+
+      z-index: 6;
+    }
+
     & .img-marker-p {
       height: 33.5rem;
       width: 10.75rem;
+
+      z-index: 5;
     }
 
     &:hover {
+      &>* {
+        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+        transition-delay: 0s;
+      }
 
       & p,
       & img {
@@ -89,7 +110,7 @@ section.mystery-box {
 
       & .img-pin {
         transform: translate(-16.5rem, 17rem) rotate(-8deg);
-        z-index: 11;
+        z-index: 9;
       }
 
       & .img-marker-y {
@@ -102,42 +123,35 @@ section.mystery-box {
         z-index: 5;
       }
 
-      & p {
-        font: var(--body-md);
-        color: var(--text-title);
-        white-space: nowrap;
-      }
-
       & .label-book {
-        transform: translate(-350px, -380px);
+        transform: translate(-23.75rem, -22.80rem);
       }
 
       & .label-pin {
-        transform: translate(-350px, 10px);
+        transform: translate(-22.81rem, 1.25rem);
       }
 
       & .label-marker {
-        transform: translate(380px, 350px);
+        transform: translate(16.62rem, 23.1rem);
       }
 
       & .arrow-1,
       & .arrow-2,
       & .arrow-3 {
-        width: 5rem;
         height: auto;
-        z-index: 15;
+        z-index: 9;
       }
 
       & .arrow-1 {
-        transform: translate(-18.75rem, -21.87rem);
+        transform: translate(-17.75rem, -19.87rem);
       }
 
       & .arrow-2 {
-        transform: translate(-21.25rem, 4.7rem);
+        transform: translate(-22.5rem, 7rem);
       }
 
       & .arrow-3 {
-        transform: translate(25rem, 18.12rem);
+        transform: translate(19.5rem, 16.5rem);
       }
     }
   }
