@@ -1,0 +1,187 @@
+section.pricing {
+  padding: 5rem 2rem;
+  background-color: var(--bg-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+
+  & .pricing-header {
+    text-align: center;
+
+    h2 {
+      font: var(--title-sm);
+      color: var(--text-title);
+    }
+  }
+
+  & .pricing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  & .card {
+    display: flex;
+    flex: 0 0 20rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+
+    min-height: 26rem;
+    height: 100%;
+
+    padding: 3rem 3rem 2.5rem;
+    border-radius: 1.5rem;
+
+    background: var(--shape-base);
+    border: 1px solid var(--shape-stroke);
+    transition: transform 0.3s ease;
+
+    &:first-child {
+      transform: rotate(-10deg) translateY(2rem);
+    }
+
+    &:last-child {
+      transform: rotate(10deg) translateY(2rem);
+    }
+
+    & h3 {
+      font: var(--title-sx);
+      color: var(--blue-light);
+
+      margin-bottom: 1.5rem;
+    }
+
+    & .price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      color: var(--text-title);
+
+      .currency {
+        font: var(--body-md);
+      }
+
+      .value {
+        font: var(--title-md);
+        color: var(--text-title);
+      }
+
+      .period {
+        font: var(--text-sx);
+        color: var(--text-title);
+      }
+    }
+
+    & small {
+      display: block;
+      width: 100%;
+
+      font: var(--body-sm);
+      color: var(--text-body);
+    }
+
+    & .features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      margin-top: auto;
+
+      li {
+        font: var(--body-xs);
+        color: var(--text-body);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        &::before {
+          content: "";
+          width: 0.8rem;
+          height: 0.8rem;
+          background-color: var(--blue-base);
+          mask: url(../assets/icons/star.svg) no-repeat center / contain;
+          -webkit-mask: url(../assets/icons/star.svg) no-repeat center / contain;
+        }
+      }
+    }
+
+    & .card-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding-bottom: 1.5rem;
+    }
+
+    & button {
+      border: none;
+      height: 2.5rem;
+      border-radius: 0.8rem;
+
+      font: var(--button);
+
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+
+    .btn-primary {
+      background-color: var(--blue-dark);
+      color: var(--text-title);
+    }
+
+    .btn-secondary {
+      background-color: var(--pink-dark);
+      color: var(--text-title);
+    }
+  }
+
+  /* Card Semestral */
+  & .card.featured {
+    z-index: 2;
+    background: var(--shape-hover);
+
+    & h3 {
+      font: var(--title-sx);
+      color: var(--pink-light);
+    }
+
+    & .badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+
+      font: var(--tag);
+      color: var(--text-body);
+      background: var(--shape-stroke);
+
+      text-transform: uppercase;
+
+      padding: 0.55rem 1.25rem;
+      gap: .5rem;
+      border-radius: 6.25rem;
+    }
+
+    & .card-icon {
+      position: absolute;
+      width: 5rem;
+
+      top: -3.2rem;
+      left: 1.5rem;
+
+      transform: none;
+      z-index: -1;
+    }
+
+    & .features li::before {
+      background-color: var(--pink-dark);
+    }
+  }
+}
