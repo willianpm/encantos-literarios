@@ -176,7 +176,7 @@ section.pricing {
     }
 
     & .card-icon {
-      mask-image: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
+      mask: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
       -webkit-mask: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
       background-color: var(--pink-base);
 
@@ -222,8 +222,8 @@ section.pricing {
     & .star-sm {
       width: 13px;
       height: 13px;
-      top: -3.8rem;
-      left: -3rem;
+      top: .5rem;
+      left: -2rem;
       opacity: 0.8;
     }
   }
@@ -231,16 +231,16 @@ section.pricing {
   .card:last-child {
     & .star-md {
       top: auto;
-      bottom: 5.5rem;
+      bottom: -1rem;
       left: auto;
-      right: 1.5rem;
+      right: -2.5rem;
     }
 
     & .star-sm {
       top: auto;
-      bottom: 4rem;
+      bottom: -1.5rem;
       left: auto;
-      right: 3.2rem;
+      right: .1rem;
     }
   }
 }
