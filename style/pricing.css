@@ -32,7 +32,7 @@ section.pricing {
 
   & .card {
     display: flex;
-    flex: 0 0 20rem;
+    flex: 0 0 18rem;
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
@@ -40,19 +40,26 @@ section.pricing {
     min-height: 26rem;
     height: 100%;
 
-    padding: 3rem 3rem 2.5rem;
+    padding: 2rem 1rem 2.5rem;
     border-radius: 1.5rem;
 
     background: var(--shape-base);
     border: 1px solid var(--shape-stroke);
     transition: transform 0.3s ease;
 
+    & .card-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding-bottom: 1.5rem;
+    }
+
     &:first-child {
       transform: rotate(-8deg) translateY(4rem);
     }
 
     &:last-child {
-      transform: rotate(12deg) translateY(4rem);  
+      transform: rotate(12deg) translateY(4rem);
     }
 
     & h3 {
@@ -65,11 +72,11 @@ section.pricing {
     & .price {
       display: flex;
       align-items: baseline;
-      gap: 0.4rem;
       color: var(--text-title);
 
       .currency {
-        font: var(--body-md);
+        font: var(--title-md);
+        margin-right: 0.5rem;
       }
 
       .value {
@@ -78,7 +85,7 @@ section.pricing {
       }
 
       .period {
-        font: var(--text-sx);
+        font: var(--title-sx);
         color: var(--text-title);
       }
     }
@@ -86,6 +93,7 @@ section.pricing {
     & small {
       display: block;
       width: 100%;
+      padding-top: 0.5rem;
 
       font: var(--body-sm);
       color: var(--text-body);
@@ -117,17 +125,10 @@ section.pricing {
       }
     }
 
-    & .card-content {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      padding-bottom: 1.5rem;
-    }
-
     & button {
       border: none;
       height: 2.5rem;
-      border-radius: 0.8rem;
+      border-radius: 0.5rem;
 
       font: var(--button);
 
