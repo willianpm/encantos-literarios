@@ -182,7 +182,6 @@ section.pricing {
 
       display: inline-block;
       position: absolute;
-
       top: -2.8rem;
       left: 1rem;
 
@@ -195,6 +194,53 @@ section.pricing {
 
     & .features li::before {
       background-color: var(--pink-dark);
+    }
+  }
+
+  .card:not(.featured) {
+
+    & .star-md,
+    & .star-sm {
+      position: absolute;
+      display: block;
+      background-color: var(--pink-base);
+
+      mask: url(../assets/icons/star.svg) no-repeat center / contain;
+      -webkit-mask: url(../assets/icons/star.svg) no-repeat center / contain;
+
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    & .star-md {
+      width: 26px;
+      height: 26px;
+      top: -1.5rem;
+      left: -1.5rem;
+    }
+
+    & .star-sm {
+      width: 13px;
+      height: 13px;
+      top: -3.8rem;
+      left: -3rem;
+      opacity: 0.8;
+    }
+  }
+
+  .card:last-child {
+    & .star-md {
+      top: auto;
+      bottom: 5.5rem;
+      left: auto;
+      right: 1.5rem;
+    }
+
+    & .star-sm {
+      top: auto;
+      bottom: 4rem;
+      left: auto;
+      right: 3.2rem;
     }
   }
 }
