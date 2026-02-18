@@ -176,11 +176,18 @@ section.pricing {
     }
 
     & .card-icon {
-      position: absolute;
-      width: 5rem;
+      mask-image: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
+      -webkit-mask: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
+      background-color: var(--pink-base);
 
-      top: -3.2rem;
-      left: 1.5rem;
+      display: inline-block;
+      position: absolute;
+
+      top: -2.8rem;
+      left: 1rem;
+
+      width: 2.8rem;
+      height: 3rem;
 
       transform: none;
       z-index: -1;
