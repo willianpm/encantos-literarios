@@ -27,7 +27,7 @@ section.pricing {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 0.5rem;
   }
 
   & .card {
@@ -48,11 +48,11 @@ section.pricing {
     transition: transform 0.3s ease;
 
     &:first-child {
-      transform: rotate(-10deg) translateY(2rem);
+      transform: rotate(-8deg) translateY(4rem);
     }
 
     &:last-child {
-      transform: rotate(10deg) translateY(2rem);
+      transform: rotate(12deg) translateY(4rem);  
     }
 
     & h3 {
