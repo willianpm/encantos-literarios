@@ -12,7 +12,6 @@ section.pricing {
 
   background-image: url(../assets/pricing-background.png);
 
-
   & .pricing-header {
     margin-bottom: 3.5rem;
     text-align: center;
@@ -243,6 +242,25 @@ section.pricing {
       bottom: -1.5rem;
       left: auto;
       right: .1rem;
+    }
+  }
+
+  & .card:hover {
+    z-index: 10;
+
+    &:first-child {
+      transform: rotate(-8deg) translateY(4rem) scale(1.05);
+      filter: brightness(1.4);
+    }
+
+    &.featured {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+    &:last-child {
+      transform: rotate(12deg) translateY(4rem) scale(1.05);
+      filter: brightness(1.4);
     }
   }
 }
