@@ -44,7 +44,7 @@ section.pricing {
 
     background: var(--shape-base);
     border: 1px solid var(--shape-stroke);
-    transition: transform 0.3s ease;
+    transition: filter 0.5s ease-in-out, z-index 0.9s ease, transform 0.6s ease-in-out;
 
     & .card-content {
       display: flex;
@@ -247,20 +247,44 @@ section.pricing {
 
   & .card:hover {
     z-index: 10;
+    box-shadow: 0 0 40px var(--shape-hover);
 
     &:first-child {
-      transform: rotate(-8deg) translateY(4rem) scale(1.05);
-      filter: brightness(1.4);
+      animation: bounce 0.5s forwards;
+      background-color: var(--shape-hover);
     }
 
     &.featured {
-      transform: scale(1.05);
-      filter: brightness(1.2);
+      animation: bounceFeatured 0.5s forwards;
+      background-color: var(--shape-hover);
     }
 
     &:last-child {
-      transform: rotate(12deg) translateY(4rem) scale(1.05);
-      filter: brightness(1.4);
+      animation: bounceChild 0.5s forwards;
+      background-color: var(--shape-hover);
     }
+  }
+
+  & .card:not(.featured):hover~.card.featured,
+  & .pricing-container:has(.card:not(.featured):hover) .card.featured {
+    background-color: var(--shape-base);
+  }
+}
+
+@keyframes bounce {
+  100% {
+    transform: rotate(-8deg) translateY(3.4rem);
+  }
+}
+
+@keyframes bounceFeatured {
+  100% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+@keyframes bounceChild {
+  100% {
+    transform: rotate(12deg) translateY(3.3rem);
   }
 }
