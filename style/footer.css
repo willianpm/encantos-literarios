@@ -1,0 +1,5 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: url(../assets/book-trace-background.png);
+}
