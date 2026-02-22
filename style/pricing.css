@@ -176,8 +176,7 @@ section.pricing {
 
     & .card-icon {
       mask: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
-      -webkit-mask: url(../assets/icons/rabbit-head.svg) no-repeat center /
-        contain;
+      -webkit-mask: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
       background-color: var(--pink-base);
       display: inline-block;
       position: absolute;
@@ -278,6 +277,46 @@ section.pricing {
 
     &::after {
       transform: rotate(20deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section.pricing {
+    height: auto;
+    padding: 4rem 0;
+
+    .pricing-container {
+      display: flex;
+      justify-content: flex-start;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0 2rem 2rem;
+      gap: 1.5rem;
+      width: 100%;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .card-container {
+      flex: 0 0 85vw;
+      scroll-snap-align: center;
+
+      &:first-child,
+      &:last-child {
+        transform: none;
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .card {
+      min-height: 30rem;
+      &:hover {
+        transform: none;
+      }
     }
   }
 }

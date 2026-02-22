@@ -99,3 +99,55 @@
     filter: brightness(1.2);
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    background: url(../assets/book-trace-background.png) top center / cover no-repeat;
+    padding: 4rem 1.5rem;
+    text-align: center;
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .footer-brand {
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+    }
+
+    .footer-logo {
+      width: 12rem;
+      margin: 0 auto;
+    }
+
+    .social-links {
+      justify-content: center;
+      gap: 1.25rem;
+      width: 100%;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+    }
+
+    .footer-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      width: 100%;
+      text-align: left;
+    }
+
+    .footer-group h2 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+    }
+
+    .footer-links {
+      gap: 0.8rem;
+    }
+  }
+}

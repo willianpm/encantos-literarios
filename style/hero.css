@@ -146,3 +146,21 @@ section.hero {
     }
   }
 }
+
+@media (max-width: 768px) {
+  section.hero {
+    margin: 3rem auto;
+    padding: 0 1.5rem 3rem;
+
+    .hero-features .feature-icons {
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-features p {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  }
+}
