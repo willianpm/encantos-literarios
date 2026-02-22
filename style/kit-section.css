@@ -42,16 +42,19 @@ section.mystery-box {
 
   & .mystery-box-content {
     display: grid;
-    grid-template-areas: "stack";
+    grid-template-areas: 'stack';
     justify-items: center;
     align-items: center;
 
     min-height: 57.5rem;
     margin-top: 4rem;
 
-    &>* {
+    & > * {
       grid-area: stack;
-      transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out, visibility 0.8s;
+      transition:
+        transform 0.3s ease-in-out,
+        opacity 0.8s ease-in-out,
+        visibility 0.8s;
       transition-delay: 0.2s;
 
       will-change: transform, opacity;
@@ -97,8 +100,10 @@ section.mystery-box {
     }
 
     &:hover {
-      &>* {
-        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+      & > * {
+        transition:
+          transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+          opacity 0.4s ease;
         transition-delay: 0s;
       }
 
@@ -124,7 +129,7 @@ section.mystery-box {
       }
 
       & .label-book {
-        transform: translate(-23.75rem, -22.80rem);
+        transform: translate(-23.75rem, -22.8rem);
       }
 
       & .label-pin {
