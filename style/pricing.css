@@ -28,9 +28,22 @@ section.pricing {
     gap: 0.5rem;
   }
 
+  & .card-container {
+    position: relative;
+    flex: 0 0 18rem;
+    transition: transform 0.4s ease-in-out;
+
+    &:first-child {
+      transform: rotate(-8deg) translateY(4rem);
+    }
+
+    &:last-child {
+      transform: rotate(12deg) translateY(4rem);
+    }
+  }
+
   & .card {
     display: flex;
-    flex: 0 0 18rem;
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
@@ -43,21 +56,15 @@ section.pricing {
 
     background: var(--shape-base);
     border: 1px solid var(--shape-stroke);
-    transition: filter 0.3s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.4s ease-in-out, z-index 0.1s ease-in-out;
+    transition: filter 0.3s ease-in-out, transform 0.4s ease-in-out,
+      box-shadow 0.2s ease-in-out, background-color 0.4s ease-in-out,
+      z-index 0.1s ease-in-out;
 
     & .card-content {
       display: flex;
       flex-direction: column;
       flex: 1;
       padding-bottom: 1.5rem;
-    }
-
-    &:first-child {
-      transform: rotate(-8deg) translateY(4rem);
-    }
-
-    &:last-child {
-      transform: rotate(12deg) translateY(4rem);
     }
 
     & h3 {
@@ -197,7 +204,7 @@ section.pricing {
     }
   }
 
-  .card:not(.featured) {
+  .card-container:not(:has(.featured)) {
 
     & .star-md,
     & .star-sm {
@@ -209,7 +216,7 @@ section.pricing {
       -webkit-mask: url(../assets/icons/star.svg) no-repeat center / contain;
 
       pointer-events: none;
-      z-index: 5;
+      z-index: -1;
     }
 
     & .star-md {
@@ -222,13 +229,13 @@ section.pricing {
     & .star-sm {
       width: 13px;
       height: 13px;
-      top: .5rem;
+      top: 0.5rem;
       left: -2rem;
       opacity: 0.8;
     }
   }
 
-  .card:last-child {
+  .card-container:last-child {
     & .star-md {
       top: auto;
       bottom: -1rem;
@@ -240,32 +247,34 @@ section.pricing {
       top: auto;
       bottom: -1.5rem;
       left: auto;
-      right: .1rem;
+      right: 0.1rem;
     }
   }
 
   & .card:hover {
-    z-index: 10;
     box-shadow: 0 0 40px var(--shape-hover);
+    background-color: var(--shape-hover);
+  }
+
+  & .card-container:has(.card:not(.featured):hover) {
+    z-index: 10;
 
     &:first-child {
       transform: rotate(-8deg) translateY(3.4rem);
-      background-color: var(--shape-hover);
-    }
-
-    &.featured {
-      transform: translateY(-0.5rem);
-      background-color: var(--shape-hover);
     }
 
     &:last-child {
       transform: rotate(12deg) translateY(3.3rem);
-      background-color: var(--shape-hover);
     }
   }
 
-  & .card:not(.featured):hover~.card.featured,
+  & .card.featured:hover {
+    transform: translateY(-0.5rem);
+    z-index: 10;
+  }
+
   & .pricing-container:has(.card:not(.featured):hover) .card.featured {
     background-color: var(--shape-base);
   }
 }
+
