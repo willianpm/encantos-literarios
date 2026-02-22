@@ -2,14 +2,11 @@ section.pricing {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   max-width: 100%;
   height: calc(100vh);
-
   padding: 5rem 2rem;
   gap: 3.5rem;
-
-  background-image: url(../assets/pricing-background.png);
+  background: url(../assets/pricing-background.png);
 
   & .pricing-header {
     margin-bottom: 3.5rem;
@@ -45,20 +42,14 @@ section.pricing {
   & .card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     position: relative;
-
     min-height: 26rem;
     height: 100%;
-
     padding: 2rem 1rem 2.5rem;
     border-radius: 1.5rem;
-
     background: var(--shape-base);
     border: 1px solid var(--shape-stroke);
-    transition: filter 0.3s ease-in-out, transform 0.4s ease-in-out,
-      box-shadow 0.2s ease-in-out, background-color 0.4s ease-in-out,
-      z-index 0.1s ease-in-out;
+    transition: filter .3s ease-in-out, transform .4s ease-in-out, box-shadow .2s ease-in-out, background-color .4s ease-in-out, z-index .1s ease-in-out;
 
     & .card-content {
       display: flex;
@@ -70,7 +61,6 @@ section.pricing {
     & h3 {
       font: var(--title-sx);
       color: var(--blue-light);
-
       margin-bottom: 1.5rem;
     }
 
@@ -98,7 +88,6 @@ section.pricing {
       display: block;
       width: 100%;
       padding-top: 0.5rem;
-
       font: var(--body-sm);
       color: var(--text-body);
     }
@@ -108,7 +97,6 @@ section.pricing {
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
-
       margin-top: auto;
 
       li {
@@ -133,9 +121,7 @@ section.pricing {
       border: none;
       height: 2.5rem;
       border-radius: 0.5rem;
-
       font: var(--button);
-
       cursor: pointer;
       transition: filter 0.2s;
 
@@ -161,23 +147,22 @@ section.pricing {
     background: var(--shape-hover);
 
     & h3 {
-      font: var(--title-sx);
       color: var(--pink-light);
+    }
+
+    & .features li::before {
+      background-color: var(--pink-dark);
     }
 
     & .badge {
       position: absolute;
       top: 1.5rem;
       right: 1.5rem;
-
       font: var(--tag);
       color: var(--text-body);
       background: var(--shape-stroke);
-
       text-transform: uppercase;
-
       padding: 0.55rem 1.25rem;
-      gap: .5rem;
       border-radius: 6.25rem;
     }
 
@@ -185,21 +170,13 @@ section.pricing {
       mask: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
       -webkit-mask: url(../assets/icons/rabbit-head.svg) no-repeat center / contain;
       background-color: var(--pink-base);
-
       display: inline-block;
       position: absolute;
       top: -2.8rem;
       left: 1rem;
-
       width: 2.8rem;
       height: 3rem;
-
-      transform: none;
       z-index: -1;
-    }
-
-    & .features li::before {
-      background-color: var(--pink-dark);
     }
   }
 
@@ -211,10 +188,8 @@ section.pricing {
       position: absolute;
       display: block;
       background-color: var(--pink-base);
-
       mask: url(../assets/icons/star.svg) no-repeat center / contain;
       -webkit-mask: url(../assets/icons/star.svg) no-repeat center / contain;
-
       pointer-events: none;
       z-index: -1;
       transition: transform 0.4s ease-in-out;
@@ -261,6 +236,15 @@ section.pricing {
     z-index: 10;
   }
 
+  & .card.featured:hover {
+    transform: translateY(-0.5rem);
+    z-index: 10;
+  }
+
+  & .pricing-container:has(.card:not(.featured):hover) .card.featured {
+    background-color: var(--shape-base);
+  }
+
   & .card-container:first-child:has(.card:hover) {
     & .card {
       transform: translateY(-0.6rem);
@@ -287,14 +271,5 @@ section.pricing {
     &::after {
       transform: rotate(20deg);
     }
-  }
-
-  & .card.featured:hover {
-    transform: translateY(-0.5rem);
-    z-index: 10;
-  }
-
-  & .pricing-container:has(.card:not(.featured):hover) .card.featured {
-    background-color: var(--shape-base);
   }
 }
