@@ -2,11 +2,14 @@ section.pricing {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   max-width: 100%;
   height: calc(100vh);
+
   padding: 5rem 2rem;
   gap: 3.5rem;
-  background: url(../assets/pricing-background.png);
+
+  background-image: url(../assets/pricing-background.png);
 
   & .pricing-header {
     margin-bottom: 3.5rem;
