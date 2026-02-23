@@ -295,6 +295,13 @@ section.pricing {
       gap: 1.5rem;
       width: 100%;
       -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .pricing-container::-webkit-scrollbar {
+      width: 0;
+      height: 0;
     }
 
     .card-container {

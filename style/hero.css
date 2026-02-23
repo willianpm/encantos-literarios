@@ -149,18 +149,84 @@ section.hero {
 
 @media (max-width: 768px) {
   section.hero {
-    margin: 3rem auto;
-    padding: 0 1.5rem 3rem;
+    margin: 3rem auto 2.5rem;
+    padding: 0 1.5rem 2.5rem;
 
-    .hero-features .feature-icons {
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
+    & .hero-features {
+      gap: 2rem;
+
+      & p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+      }
+
+      & .animated-text {
+        padding-inline: 0.5rem;
+      }
+
+      & .feature-icons {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      & .img-1 {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+
+      & .img-2 {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      & .img-3 {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      & .img-step-1,
+      & .img-step-2,
+      & .img-step-3 {
+        transition-delay: 0.5s;
+      }
     }
+  }
+}
 
-    .hero-features p {
-      font-size: 1.25rem;
-      line-height: 1.4;
+@media (max-width: 480px) {
+  section.hero {
+    margin: 2rem auto 2rem;
+    padding: 0 1rem 2rem;
+
+    & .hero-features {
+      gap: 1.5rem;
+
+      & p {
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      & .feature-icons {
+        gap: 1rem;
+        margin-top: 0.75rem;
+      }
+
+      & .img-1 {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+
+      & .img-2 {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      & .img-3 {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
     }
   }
 }
